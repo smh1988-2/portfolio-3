@@ -12,6 +12,7 @@
     <title>Sean Hurley</title>
 </head>
 
+
 <body>
     <main>
         <section class="hero">
@@ -81,7 +82,7 @@
                         consequatur sint perferendis perspiciatis?</p>
                 </hgroup>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
@@ -110,12 +111,12 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
                     <hgroup class="switchback-text-container">
-                        <p class="switchback-eyebrow bolder text-upper mb-6">April 2022 - Present</p>
+                        <p class="switchback-eyebrow bolder text-upper mb-6">November 2021 - February 2022</p>
                         <h1 class="switchback-heading bold ">Software Engineering Student</h1>
                         <h2 class="switchback-subheading bolder mb-16">Flatiron School</h2>
                         <ul class="switchback-list">
@@ -129,7 +130,7 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
@@ -154,7 +155,7 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
@@ -182,12 +183,12 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
                     <hgroup class="switchback-text-container">
-                        <p class="switchback-eyebrow bolder text-upper mb-6">Nov 2017 - June 2018</p>
+                        <p class="switchback-eyebrow bolder text-upper mb-6">Nov 2016 - June 2017</p>
                         <h1 class="switchback-heading bold ">Senior Digital Marketing Manager</h1>
                         <h2 class="switchback-subheading bolder mb-16">Triplemint</h2>
                         <ul class="switchback-list">
@@ -203,7 +204,7 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
@@ -229,7 +230,7 @@
                     </hgroup>
                 </div>
 
-                <div class="switchback equal-grid">
+                <div class="experience-switchback switchback equal-grid">
                     <div class="switchback-image-container">
                         <img src="" class="switchback-image" />
                     </div>
@@ -266,5 +267,24 @@
         <section class="contact"></section>
     </main>
 </body>
+
+<script>
+    const targets = document.querySelectorAll(".experience-switchback");
+    console.log(targets);
+
+    function handleIntersection(entries) {
+        entries.map((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible')
+            } else {
+                entry.target.classList.remove('visible')
+            }
+        });
+    }
+    const observer = new IntersectionObserver(handleIntersection);
+
+    targets.forEach(target => observer.observe(target));
+
+</script>
 
 </html>

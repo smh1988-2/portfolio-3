@@ -126,12 +126,14 @@ q:after {
 
 :root {
 	--main-bg-color: #27273C;
+	--dark-grey: #08080C;
 	--snow: #FFFBFC;
 	--orange: #E57A44;
 }
 
 body {
 	background-color: var(--main-bg-color);
+	color: var(--dark-grey);
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -220,6 +222,18 @@ section {
 .switchback-heading {
 	font-size: 24px;
 }
+
+
+.experience-switchback {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .experience-switchback.visible {
+	opacity: 1;
+	transform: translateX(0);
+  }
 
 /* HERO */
 .hero {
@@ -335,6 +349,10 @@ gap: 16px;
 	.benefit-card {
 		text-align: left;
 	}
+
+	.experience-section-container {
+		gap: 48px;
+	}
 }
 
 @media screen and (min-width:80rem) {
@@ -348,5 +366,9 @@ gap: 16px;
 
 	.trust-bar-logos-container {
 		justify-content: space-between;
+	}
+
+	.experience-section-container {
+		gap: 56px;
 	}
 }
