@@ -144,11 +144,16 @@ section {
 }
 
 .container {
+	padding: 0 1rem;
 	margin: 0 auto;
 }
 
 .flex {
 	display: flex;
+}
+
+.grid {
+	display: grid;
 }
 
 .equal-grid {
@@ -158,6 +163,26 @@ section {
 
 .text-center {
 	text-align: center;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+.light {
+	font-weight: 400;
+}
+
+.regular {
+	font-weight: 500;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.bolder {
+	font-weight: 700;
 }
 
 .text-snow {
@@ -202,7 +227,39 @@ section {
 }
 
 /* TRUST BAR */
+.trust-bar-section {
+	padding-top: 0;
+}
+
 .trust-bar-heading {
+	font-size: 24px;
+}
+
+.trust-bar-logos-container {
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: center;
+}
+
+.trust-bar-logo {
+	height: 25px;
+	width: auto;
+}
+
+/* BENEFITS */
+.benefit-cards-section {
+	background-color: var(--snow);
+}
+
+.benefit-cards-container {
+gap: 16px;
+}
+
+.benefit-card {
+	text-align: center;
+}
+
+.benefit-card-heading {
 	font-size: 24px;
 }
 
@@ -231,6 +288,14 @@ section {
 	.hero-heading {
 		font-size: 48px;
 	}
+
+	.benefit-cards-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.benefit-card {
+		text-align: left;
+	}
 }
 
 @media screen and (min-width:80rem) {
@@ -240,5 +305,9 @@ section {
 
 	.container {
 		max-width: 990px;
+	}
+
+	.trust-bar-logos-container {
+		justify-content: space-between;
 	}
 }
