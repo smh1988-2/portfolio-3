@@ -126,12 +126,14 @@ q:after {
 
 :root {
 	--main-bg-color: #27273C;
+	--dark-grey: #08080C;
 	--snow: #FFFBFC;
 	--orange: #E57A44;
 }
 
 body {
 	background-color: var(--main-bg-color);
+	color: var(--dark-grey);
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -144,6 +146,7 @@ section {
 }
 
 .container {
+	padding: 0 1rem;
 	margin: 0 auto;
 }
 
@@ -151,13 +154,44 @@ section {
 	display: flex;
 }
 
+.grid {
+	display: grid;
+}
+
 .equal-grid {
 	display: grid;
 	gap: 32px;
 }
 
+.switchback.equal-grid:nth-child(even)  .switchback-image-container {
+	order:1
+}
+
+.section-heading {
+	font-size: 32px;
+}
 .text-center {
 	text-align: center;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+.light {
+	font-weight: 400;
+}
+
+.regular {
+	font-weight: 500;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.bolder {
+	font-weight: 700;
 }
 
 .text-snow {
@@ -181,6 +215,26 @@ section {
 	margin-bottom: 32px;
 }
 
+.switchback-eyebrow {
+	color: var(--orange)
+}
+
+.switchback-heading {
+	font-size: 24px;
+}
+
+
+.experience-switchback {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .experience-switchback.visible {
+	opacity: 1;
+	transform: translateX(0);
+  }
+
 /* HERO */
 .hero {
 	background-color: var(--main-bg-color);
@@ -202,14 +256,70 @@ section {
 }
 
 /* TRUST BAR */
+.trust-bar-section {
+	padding-top: 0;
+}
+
 .trust-bar-heading {
 	font-size: 24px;
+}
+
+.trust-bar-logos-container {
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: center;
+}
+
+.trust-bar-logo {
+	height: 25px;
+	width: auto;
+	mix-blend-mode: luminosity;
+}
+
+/* BENEFITS */
+.benefit-cards-section {
+	background-color: var(--snow);
+}
+
+.benefit-cards-container {
+gap: 16px;
+}
+
+.benefit-card {
+	text-align: center;
+}
+
+.benefit-card-heading {
+	font-size: 24px;
+}
+
+/* EXPERIENCE */
+.experience-section {
+	background-color: var(--snow);
+}
+
+.experience-section-container {
+	gap: 32px;
+    flex-flow: column nowrap;
+}
+
+.switchback-list {
+	list-style: disc;
+}
+
+.switchback-list-item {
+	line-height: 1.2;
+	margin-bottom: 6px;
 }
 
 
 @media screen and (min-width:48rem) {
 	section {
 		padding: 3rem 0;
+	}
+
+	.section-heading {
+		font-size: 48px;
 	}
 
 	.container {
@@ -229,7 +339,19 @@ section {
 	}
 
 	.hero-heading {
-		font-size: 48px;
+		font-size: 56px;
+	}
+
+	.benefit-cards-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.benefit-card {
+		text-align: left;
+	}
+
+	.experience-section-container {
+		gap: 48px;
 	}
 }
 
@@ -240,5 +362,13 @@ section {
 
 	.container {
 		max-width: 990px;
+	}
+
+	.trust-bar-logos-container {
+		justify-content: space-between;
+	}
+
+	.experience-section-container {
+		gap: 56px;
 	}
 }
