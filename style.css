@@ -171,10 +171,10 @@ section {
 	font-size: 32px;
 }
 
-.section-heading, 
+.section-heading,
 .section-body-text {
- max-width: 540px;
- margin: 0 auto;
+	max-width: 540px;
+	margin: 0 auto;
 }
 
 .text-center {
@@ -314,6 +314,11 @@ section {
 	mix-blend-mode: luminosity;
 }
 
+/* ABOUT */
+.about-section {
+	background-color: var(--snow);
+}
+
 /* BENEFITS */
 .benefit-cards-section {
 	background-color: var(--snow);
@@ -360,6 +365,16 @@ section {
 	flex-flow: column;
 	gap: 16px;
 }
+
+/* PORTFOLIO */
+.portfolio-section {
+	background-color: var(--snow);
+}
+
+.portfolio-switchback.equal-grid {
+	align-items: center;
+}
+
 
 @media screen and (min-width:48rem) {
 	section {
