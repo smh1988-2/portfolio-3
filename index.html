@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Sean Hurley</title>
+    <script type="text/javascript" src="./script.js" defer></script>
+
 </head>
 
 
@@ -258,7 +260,15 @@
             </div>
         </section>
 
-        <section class="conversion-panel"></section>
+        <section class="conversion-panel text-snow text-center">
+            <div class="container">
+                <h2>Get in touch</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, deserunt earum placeat neque nisi nemo.</p>
+                <a href="#contact">Contact Me</a>
+                <a href="https://www.linkedin.com/seanhurley">LinkedIn</a>
+            </div>
+            
+        </section>
 
         <section class="portfolio"></section>
 
@@ -267,24 +277,4 @@
         <section class="contact"></section>
     </main>
 </body>
-
-<script>
-    const targets = document.querySelectorAll(".experience-switchback");
-    console.log(targets);
-
-    function handleIntersection(entries) {
-        entries.map((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible')
-            } else {
-                entry.target.classList.remove('visible')
-            }
-        });
-    }
-    const observer = new IntersectionObserver(handleIntersection);
-
-    targets.forEach(target => observer.observe(target));
-
-</script>
-
 </html>
