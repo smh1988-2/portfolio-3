@@ -161,6 +161,9 @@ section {
 	gap: 32px;
 }
 
+.switchback.equal-grid:nth-child(even)  .switchback-image-container {
+	order:1
+}
 .text-center {
 	text-align: center;
 }
