@@ -238,6 +238,12 @@ section {
 	gap: 16px;
 }
 
+.card-cta-container {
+	flex-direction: column;
+	gap: 12px;
+	text-align: center;
+}
+
 .button {
 	border: 1px solid var(--orange);
 	border-radius: 6px;
@@ -379,6 +385,18 @@ section {
 	gap: 32px;
 }
 
+/* TESTIMONIALS */
+.testimonial-cards-container {
+gap: 24px;
+}
+
+.testimonial-card {
+	border: 1px solid var(--snow);
+	border-radius: 16px;
+	padding: 24px;
+
+}
+
 
 @media screen and (min-width:48rem) {
 	section {
@@ -427,6 +445,11 @@ section {
 	}
 
 	.potfolio-cards-container {
+		grid-template-columns: repeat(3, 1fr);
+	gap: 56px;
+	}
+
+	.testimonial-cards-container {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
