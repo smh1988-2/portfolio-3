@@ -163,13 +163,20 @@ section {
 	gap: 32px;
 }
 
-.switchback.equal-grid:nth-child(even)  .switchback-image-container {
-	order:1
+.switchback.equal-grid:nth-child(even) .switchback-image-container {
+	order: 1
 }
 
 .section-heading {
 	font-size: 32px;
 }
+
+.section-heading,
+.section-body-text {
+	max-width: 540px;
+	margin: 0 auto;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -203,6 +210,10 @@ section {
 	font-weight: 600;
 }
 
+.mx-auto {
+	margin: 0 auto;
+}
+
 .mb-6 {
 	margin-bottom: 6px;
 }
@@ -223,17 +234,44 @@ section {
 	font-size: 24px;
 }
 
+.button {
+	border: 1px solid var(--orange);
+	border-radius: 6px;
+	padding: 12px 16px;
+	text-decoration: none;
+	transition: background-color .2s ease, color .2s ease
+}
+
+.button-primary {
+	background-color: var(--orange);
+	color: var(--snow);
+}
+
+.button-primary:hover {
+	background-color: var(--snow);
+	color: var(--orange);
+}
+
+.button-secondary {
+	background-color: var(--snow);
+	color: var(--orange);
+}
+
+.button-secondary:hover {
+	background-color: var(--orange);
+	color: var(--snow);
+}
 
 .experience-switchback {
 	opacity: 0;
 	transform: translateY(100px);
 	transition: opacity 1s ease, transform 1s ease;
-  }
-  
-  .experience-switchback.visible {
+}
+
+.experience-switchback.visible {
 	opacity: 1;
 	transform: translateX(0);
-  }
+}
 
 /* HERO */
 .hero {
@@ -276,13 +314,18 @@ section {
 	mix-blend-mode: luminosity;
 }
 
+/* ABOUT */
+.about-section {
+	background-color: var(--snow);
+}
+
 /* BENEFITS */
 .benefit-cards-section {
 	background-color: var(--snow);
 }
 
 .benefit-cards-container {
-gap: 16px;
+	gap: 16px;
 }
 
 .benefit-card {
@@ -300,7 +343,7 @@ gap: 16px;
 
 .experience-section-container {
 	gap: 32px;
-    flex-flow: column nowrap;
+	flex-flow: column nowrap;
 }
 
 .switchback-list {
@@ -310,6 +353,26 @@ gap: 16px;
 .switchback-list-item {
 	line-height: 1.2;
 	margin-bottom: 6px;
+}
+
+/* CONVERSIONAL PANELS */
+.conversion-panel-container {
+	flex-direction: column;
+	gap: 32px;
+}
+
+.conversional-panel-cta-container {
+	flex-flow: column;
+	gap: 16px;
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+	background-color: var(--snow);
+}
+
+.portfolio-switchback.equal-grid {
+	align-items: center;
 }
 
 
@@ -352,6 +415,11 @@ gap: 16px;
 
 	.experience-section-container {
 		gap: 48px;
+	}
+
+	.conversional-panel-cta-container {
+		flex-flow: row;
+		gap: 32px;
 	}
 }
 

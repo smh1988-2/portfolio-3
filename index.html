@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Sean Hurley</title>
+    <script type="text/javascript" src="./script.js" defer></script>
+
 </head>
 
 
@@ -46,6 +48,16 @@
             </div>
         </section>
 
+        <section class="about-section">
+            <div class="about-container container">
+                <hgroup class="text-center">
+                    <h2 class="section-heading mb-16">About Me</h2>
+                    <p class="section-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum,
+                        deserunt earum placeat neque nisi nemo.</p>
+                </hgroup>
+            </div>
+        </section>
+
         <!-- benefit cards -->
         <section class="benefit-cards-section">
             <div class="container">
@@ -78,7 +90,8 @@
             <div class="experience-section-container flex container">
                 <hgroup class="text-center mb-32">
                     <h2 class="section-heading mb-16">Experience</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus. Aperiam
+                    <p class="section-body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+                        necessitatibus. Aperiam
                         consequatur sint perferendis perspiciatis?</p>
                 </hgroup>
 
@@ -258,33 +271,50 @@
             </div>
         </section>
 
-        <section class="conversion-panel"></section>
+        <section class="conversion-panel text-snow text-center">
+            <div class="conversion-panel-container flex container">
+                <h2 class="section-heading">Get in touch</h2>
+                <p class="section-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, deserunt
+                    earum placeat neque nisi nemo.</p>
+                <div class="conversional-panel-cta-container flex mx-auto">
+                    <a href="#contact" class="button button-primary">Contact Me</a>
+                    <a href="https://www.linkedin.com/seanhurley" class="button button-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </section>
 
-        <section class="portfolio"></section>
+        <section class="portfolio-section">
+            <div class="portfolio-container container">
+                <hgroup class="text-center mb-32">
+                    <h2 class="section-heading mb-16">Portfolio</h2>
+                    <p class="section-body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum,
+                        deserunt earum placeat neque nisi nemo.</p>
+                </hgroup>
+
+                <div class="portfolio-switchback switchback equal-grid">
+                    <div class="switchback-image-container">
+                        <img src="./images/taylorem-ipswift.png" class="switchback-image" />
+                    </div>
+                    <hgroup class="switchback-text-container">
+
+                        <h1 class="switchback-heading bold ">Taylorem Ipswift</h1>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci consequatur
+                            rerum perspiciatis blanditiis eum.</p>
+
+                            <div class="siwtchback-cta-container flex mx-auto">
+                                <a href="#" class="button button-primary">Check it Out</a>
+                                <a href="#" class="button button-secondary">GitHub</a>
+                            </div>
+                    </hgroup>
+                </div>
+            </div>
+        </section>
 
         <section class="testimonial"></section>
 
         <section class="contact"></section>
     </main>
 </body>
-
-<script>
-    const targets = document.querySelectorAll(".experience-switchback");
-    console.log(targets);
-
-    function handleIntersection(entries) {
-        entries.map((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible')
-            } else {
-                entry.target.classList.remove('visible')
-            }
-        });
-    }
-    const observer = new IntersectionObserver(handleIntersection);
-
-    targets.forEach(target => observer.observe(target));
-
-</script>
 
 </html>
