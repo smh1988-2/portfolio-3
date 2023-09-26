@@ -134,7 +134,7 @@ q:after {
 body {
 	background-color: var(--main-bg-color);
 	color: var(--dark-grey);
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 
@@ -287,20 +287,52 @@ section {
 .hero {
 	background-color: var(--main-bg-color);
 	color: var(--snow);
+	height: 80vh;
 }
 
-.hero-illustration {
-	width: 100%;
+.hero .container {
+	height: 70vh;
+	gap: 0px;
 }
 
 .hero-text-container {
+	justify-content: space-between;
+	align-self: start;
 	flex-direction: column;
-	justify-content: center;
+	height: 100%;
+    border-right: 1px solid var(--orange);
+}
+
+.hero-right-container {
+	align-self: end;
+	padding: 32px;
+	border-top: 1px solid var(--orange);
 }
 
 .hero-heading {
 	font-size: 32px;
 	font-weight: 700;
+	position: relative;
+}
+
+.hero-heading:after {
+	display: block;
+	border-radius: 100%;
+	content:"";
+	width: 160px;
+	height: 160px;
+	background-color: var(--orange);
+	position: absolute;
+	top: -100px;
+	left: -75px;
+	z-index: -1;
+}
+
+.hero-image {
+	width: 90%;
+	height: auto;
+	padding: 32px 32px 0 0;
+	border-radius: 0px 190px / 120px;
 }
 
 /* TRUST BAR */

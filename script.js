@@ -1,5 +1,4 @@
 const targets = document.querySelectorAll(".experience-switchback");
-console.log(targets);
 
 function handleIntersection(entries) {
     entries.map((entry) => {
